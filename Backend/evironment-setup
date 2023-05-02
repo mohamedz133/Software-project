@@ -1,0 +1,4 @@
+# run this in your terminal
+
+npm init --yes
+npm install express --save
