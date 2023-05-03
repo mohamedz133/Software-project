@@ -1,15 +1,18 @@
-import logo from './logo.svg';
+
+//import './App.css';
+//import Contactus from './pages/Contactus.js';
+
 import './App.css';
-import Contactus from './pages/Contactus.js';
+import Loginpage from './pages/Loginpage.js'
 
 
 function App() {
   return (
 
       <div>
-        <h1>Welcome to my app</h1>
 
-        <Contactus />
+
+        <Loginpage />
       </div>  );
 }
 
