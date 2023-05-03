@@ -11,7 +11,7 @@
 {
     width:100%;
     height:100vh;
-    background-image:linear-gradient(rgba(24, 24, 36, 0.4),rgba(0, 0, 31, 0.8));
+    background-image:linear-gradient(rgba(24, 24, 36, 0.4),rgba(0, 0, 31, 0.8)),url('../img/logo.jpg');
     background-position: center;
     background-size: cover;
     position: relative;
