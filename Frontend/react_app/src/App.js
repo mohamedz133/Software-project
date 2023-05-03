@@ -9,8 +9,8 @@ import Loginpage from './pages/Loginpage.js'
 function App() {
   return (
 
-      <div>
-
+      <div >
+        <Loginpage/>
       </div>  );
 }
 
