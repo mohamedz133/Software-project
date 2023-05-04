@@ -137,7 +137,7 @@ form p a
     padding-inline: 5px;
     border-style: auto;
     border-radius: 10%;
-    font-family: Tahoma;
+    font-family: serif;
 
 
 }
@@ -150,4 +150,48 @@ form p a
     border:0;
 
 
+}
+
+
+
+/* Media queries for different screen sizes */
+
+@media screen and (max-width: 768px) and (min-height: 300px) and (max-height:600px){
+    .container {
+
+        background-position: center;
+        background-size: 100% 100%;
+
+    }
+    .form_sign {
+        padding: 10px;
+        width:50%
+    }
+
+    .form_sign h1 {
+        font-size: 25px;
+        margin-bottom: 40px;
+    }
+
+    .input-field {
+        max-height: 50px;
+
+    }
+
+    input {
+        padding: 15px 10px;
+    }
+
+    .buttons button {
+        height: 30px;
+        width: 80px;
+        margin: 3% 3%;
+
+    }}
+
+
+@media screen and (min-width: 992px) {
+    .input-field {
+        max-height: 80%;
+    }
 }
