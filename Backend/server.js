@@ -1,9 +1,9 @@
-import express from "express";
 import dotenv from "dotenv"; 
+import express from "express";
 import morgan from "morgan";
 import mongoose from "mongoose";
 
-dotenv.config({path: './config.env'}); // load .env file
+dotenv.config(); // load .env file
 
 
 // Connect to DB
@@ -15,6 +15,12 @@ mongoose.connect(process.env.DB_URI).then(conn => {
     process.exit(1);
 })
 
+const userSchema = new mongoose.Schema({
+    name: {type: String},
+    age: {type: Number}
+  });
+
+const u = mongoose.model("users", userSchema);
 
 // Initialize express
 const app = express();
@@ -27,12 +33,13 @@ if (process.env.NODE_ENV === 'development') {
 
 
 
-app.get("/", (req,res) => {
-    res.send("Hello!");
+app.get("/", async (req,res) => {
+    // res.send("Hello World");
+    res.send(await u.find());
 });
 
 
-const port = process.env.PORT  || 8000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
 });
