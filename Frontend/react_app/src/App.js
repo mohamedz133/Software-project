@@ -3,15 +3,17 @@
 //import Contactus from './pages/Contactus.js';
 
 import './App.css';
-import Loginpage from './pages/Loginpage.js'
+import Login from "./pages/Login.js";
+import Signup from "./pages/signup";
 
 
 function App() {
   return (
-
-      <div >
-        <Loginpage/>
-      </div>  );
+      <div>
+          <Login/>
+      </div>);
 }
+
+
 
 export default App;
