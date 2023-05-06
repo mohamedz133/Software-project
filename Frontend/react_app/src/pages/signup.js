@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Signup.css';
 
 function SignupForm() {
+
+  const [passwordVisible, setPasswordVisible] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+  };
   return (
     <div className="container">
       <div className="form_sign">
@@ -19,12 +25,13 @@ function SignupForm() {
             </div>
             <div className="input-field">
               <input
-                type="password"
-                className="pass-key"
-                required
-                placeholder="Password"
+                  type={passwordVisible ? 'text' : 'password'}
+                  className="pass-key"
+                  required
+                  placeholder="Password"
               />
-              <span className="show">show</span>
+              <span className="show" onClick={togglePasswordVisibility}>
+                                {passwordVisible ? 'hide' : 'show'}</span>
             </div>
           </div>
           <div className="buttons">
