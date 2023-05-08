@@ -1,10 +1,19 @@
 import mongoose from "mongoose";
+import validator from "validator";
 
 const userSchema = new mongoose.Schema({
     fname: {type: String, required: true},
     lname: {type: String, required: true},
-    email: {type: String, required: true, unique: true},
-    password: { type: String, required: true, minlength: 8, maxlength: 25},
+    email: {type: String,
+         required: true,
+         unique: true, 
+         lowercase: true,
+         validate: {
+            validator: validator.isEmail,
+            message: "Invalid email address"
+         }
+        },
+    password: { type: String, required: true},
     phone: {type: String},
     img: {type: String},
     rule: {
