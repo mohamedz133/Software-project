@@ -2,7 +2,9 @@ import express from "express";
 import dotenv from "dotenv";
 import morgan from "morgan";
 import dbconn from "./config/dbconnection.js";
+
 import {ProductsRouter} from "./routes/productRoute.js";
+import { UsersRouter } from "./routes/userRoute.js";
 
 // Load env variables
 dotenv.config({}); 
@@ -20,7 +22,8 @@ if (process.env.NODE_ENV === 'development') {
 app.use(express.json()); 
 
 // mount routes
-app.use("/", ProductsRouter);
+app.use(ProductsRouter);
+app.use(UsersRouter);
 
 // Listen to port
 const port = process.env.PORT || 3000;
