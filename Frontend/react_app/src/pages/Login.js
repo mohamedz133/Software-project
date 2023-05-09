@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAt, faLock } from '@fortawesome/free-solid-svg-icons';
 import './Signup.css';
 
 function LoginForm() {
@@ -18,9 +19,11 @@ function LoginForm() {
                 <form>
                     <div className="input-group">
                         <div className="input-field">
+                            <FontAwesomeIcon icon={faAt} beat  id="awesome1" style={{ color: "#0740b0" }} />
                             <input type="email" required placeholder="Email" />
                         </div>
                         <div className="input-field">
+                            <FontAwesomeIcon icon={faLock} beat id="awesome1" />
                             <input
                                 type={passwordVisible ? 'text' : 'password'}
                                 className="pass-key"
