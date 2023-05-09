@@ -6,4 +6,4 @@ npm install dotenv
 npm i morgan # middle ware
 npm i mongoose
 npm install mongodb
-npm install validator
+npm i express-validator
