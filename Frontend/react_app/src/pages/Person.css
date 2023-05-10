@@ -1,0 +1,64 @@
+/* Default styles */
+.people {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.person {
+    margin: 1rem;
+    width: 30%;
+}
+
+.person .info {
+    margin-top: 1rem;
+}
+
+.person h2 {
+    font-size: 1.5rem;
+}
+
+.person h3 {
+    font-size: 1.25rem;
+}
+
+.person p {
+    font-size: 1rem;
+}
+
+.person .image {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.person img {
+    width: 100%;
+    height: auto;
+}
+
+/* Media queries */
+@media screen and (max-width: 1200px) {
+    .people {
+        justify-content: space-around;
+    }
+
+    .person {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .people {
+        justify-content: center;
+    }
+
+    .person {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .person {
+        width: 80%;
+    }
+}
