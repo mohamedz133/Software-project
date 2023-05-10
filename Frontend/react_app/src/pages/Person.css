@@ -8,6 +8,7 @@
 .person {
     margin: 1rem;
     width: 30%;
+    background-color: #FFEDE6;
 }
 
 .person .info {

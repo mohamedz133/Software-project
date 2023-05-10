@@ -1,4 +1,6 @@
 import React from 'react';
+import './Person.css';
+
 
 const Person = ({ name, role, bio, image }) => {
     return (
