@@ -1253,17 +1253,7 @@ header nav li:hover .mega-menu {
   display: flex;
   flex-wrap: wrap;
 }
-.discount .image {
-  background-image: url(../imgs/discount-background2.jpg);
-  background-size: cover;
-  color: white;
-  flex-basis: 50%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-}
+
 .discount .image::before {
   content: "";
   position: absolute;
