@@ -3,11 +3,11 @@ import {getAllProducts,getOneProduct,createProduct,deleteProduct,upadteProduct} 
 
 const ProductsRouter = express.Router();
 
-categoryRouter.route("/").get(getAllProducts);
+ProductsRouter.route("/").get(getAllProducts);
 
-categoryRouter.route("/:id").get(getOneProduct);
-categoryRouter.route("/").post(createProduct);
+ProductsRouter.route("/:id").get(getOneProduct);
+ProductsRouter.route("/").post(createProduct);
 
-categoryRouter.route("/:id").delete(deleteCategory);
-categoryRouter.route("/:id").put(upadteCategory);
+ProductsRouter.route("/:id").delete(deleteProduct);
+ProductsRouter.route("/:id").put(upadteProduct);
 export {ProductsRouter};
