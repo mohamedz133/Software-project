@@ -1,11 +1,12 @@
 import './App.css';
 import Contactus from "./pages/Contactus";
+import Home from "./pages/Home";
 
 
 function App() {
     return (
         <div className="App">
-        <Contactus/>
+        <Home />
         </div>
     );
 }
