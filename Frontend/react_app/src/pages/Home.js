@@ -16,35 +16,17 @@ function Home() {
                             <a href="#articles">articles</a>
                         </li>
                         <li>
-                            <a href="#gallery">gallery</a>
+                            <a href="#gallery">About</a>
                         </li>
                         <li>
-                            <a href="#features">features</a>
+                            <a href="#features">Contact Us</a>
                         </li>
                         <li>
-                            <a href="#">other links</a>
+                            <a href="#">login/register</a>
                         </li>
                     </ul>
                 </nav>
             </header>
-
-            <div className="landing">
-                <div className="container">
-                    <div className="text">
-                        <h1>Welcome, To My World</h1>
-                        <p>
-                            Here Iam gonna share everything about my life. Books Iam reading,
-                            Games Iam Playing, Stories and Events.
-                        </p>
-                    </div>
-                    <div className="image">
-                        <img src="./imgs/landing.png" alt="Image Not Found" />
-                    </div>
-                </div>
-                <a href="#articles" className="go-down">
-                    <i className="fas fa-angle-double-down fa-2x"></i>
-                </a>
-            </div>
         </div>
     );
 }
