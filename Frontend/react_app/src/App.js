@@ -6,6 +6,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import About from "./pages/About";
 import Contactus from "./pages/Contactus";
 import Navigation from './components/Navigation'
+import Signup from "./pages/Signup";
 
 class  App extends Component {
     render() {
