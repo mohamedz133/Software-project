@@ -1,19 +1,14 @@
-
-//import './App.css';
-//import Contactus from './pages/Contactus.js';
-
 import './App.css';
-import Login from "./pages/Login.js";
-import Signup from "./pages/signup";
+import Contactus from "./pages/Contactus";
 
 
 function App() {
-  return (
-      <div>
-          <Login/>
-      </div>);
+    return (
+        <div className="App">
+        <Contactus/>
+        </div>
+    );
 }
-
 
 
 export default App;
