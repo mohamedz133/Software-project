@@ -13,13 +13,13 @@ function Home() {
                 <nav>
                     <ul>
                         <li>
-                            <a href="#articles">articles</a>
+                            <a href="#">Home</a>
                         </li>
                         <li>
-                            <a href="#gallery">About</a>
+                            <a href="#">About</a>
                         </li>
                         <li>
-                            <a href="#features">Contact Us</a>
+                            <a href="#">Contact Us</a>
                         </li>
                         <li>
                             <a href="#">login/register</a>

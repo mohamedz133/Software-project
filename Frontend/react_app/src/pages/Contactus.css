@@ -1,37 +1,70 @@
-
-
-form {
-    margin: 50px 400px;
+.contactus {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-label {
-    font-weight: bold;
-    margin-bottom: 5px;
+.contactus .form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 50%;
 }
 
-input, textarea {
-    border: 2px solid #ddd;
-    border-radius: 4px;
-    padding: 10px;
-    font-size: 16px;
-    width: 100%;
-    box-sizing: border-box;
+@media (max-width: 991px) {
+    .contactus .form {
+        flex-basis: 100%;
+    }
 }
 
+.contactus .form input,
 textarea {
-    height: 150px;
-}
-
-button {
-    background-color: #007bff;
-    color: #fff;
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+    padding: 15px;
     border: none;
-    border-radius: 4px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
+    border: 1px solid var(--main-color);
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    caret-color: var(--main-color);
+    outline: none;
 }
 
-button:hover {
-    background-color: #0062cc;
+.contactus .form textarea {
+    resize: none;
+    height: 200px;
 }
+
+.contactus .form [type="submit"] {
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+
+.contactus .form [type="submit"]:hover {
+    background-color: var(--main-color-alt);
+}
+
+.contactus .content {
+    text-align: center;
+}
+
+.contactus .content h2 {
+    font-size: 40px;
+    letter-spacing: -2px;
+}
+
+.contactus .content p {
+    line-height: 1.6;
+    font-size: 18px;
+    max-width: 500px;
+}
+
+.contactus .content img {
+    width: 300px;
+}
+

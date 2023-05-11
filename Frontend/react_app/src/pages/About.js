@@ -61,7 +61,7 @@ function About() {
                     <div class="data">
                         <img src="../imgs/Ahmed_Eida.png" alt=""/>
                         <div class="social">
-                            <a href="#">
+                            <a href="https://www.facebook.com/profile.php?id=100006536280657" target="_blank">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
                             <a href="#">
@@ -177,10 +177,7 @@ function About() {
                 </div>
 
             </div>
-
         </div>
-
-
     );
 
 

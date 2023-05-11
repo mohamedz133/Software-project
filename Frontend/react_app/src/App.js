@@ -1,7 +1,7 @@
 import './App.css';
-import Contactus from "./pages/Contactus";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Contactus from "./pages/Contactus";
 
 
 function App() {
@@ -9,9 +9,9 @@ function App() {
         <div className="App">
 
             <Home/>
-            </div>
+            <Contactus/>
+        </div>
     );
 }
-
 
 export default App;
