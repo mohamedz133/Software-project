@@ -1,0 +1,8 @@
+.idea
+.vscode
+node_modules
+./react_app/node_modules
+./react_app/build
+./react_app/.env
+./react_app/.env.local
+```

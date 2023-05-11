@@ -1,17 +1,34 @@
+import "./pages/css/world.css";
+import React ,{Component}from "react";
+import Login from "./pages/Login";
+import Home from "./pages/Home";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import About from "./pages/About";
+import Contactus from "./pages/Contactus";
+import Navigation from './components/Navigation'
+import Signup from "./pages/Signup";
 
-//import './App.css';
-//import Contactus from './pages/Contactus.js';
+class  App extends Component {
+    render() {
+        return (
+        <BrowserRouter>
+            <div className="App">
+                <Navigation/>
+            <Routes>
 
-import './App.css';
-import Loginpage from './pages/Loginpage.js'
+                <Route path="/" exact Component={Home}></Route>
+                <Route path="/About" Component={About}></Route>
+                <Route path="/Login" Component={Login}></Route>
+                <Route path="/Contactus" Component={Contactus}></Route>
 
+            </Routes>
+            </div>
 
-function App() {
-  return (
+        </BrowserRouter>
 
-      <div >
-        <Loginpage/>
-      </div>  );
+        );
+    }
 }
+
 
 export default App;

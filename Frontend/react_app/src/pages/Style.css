@@ -1,5 +1,7 @@
 body{
-    background-color:beige;
+    background-image: url("../imgs/imagesjpeg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 /* product page css */
 
@@ -11,7 +13,7 @@ body{
   
   .product {
     width: calc(33.33% - 20px);
-    background-color: #f8f9fa;
+    /* background-color: #f8f9fa; */
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
@@ -61,4 +63,28 @@ body{
     margin-top: 10px;
     font-weight: bold;
   }
-  
+  /* header */
+  .header .logo{
+    width: 40%;
+    float: left;
+  }
+  .header .nav{
+    width: 60%;
+    float: left;
+    list-style: none;
+  }
+  .clear{
+    clear: both;
+  }
+  .header .nav li{
+    display: inline-block;
+  }
+  .header .nav li a{
+    background-color:burlywood;
+    color:black;
+    font-size: x-large;
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+
+  }
