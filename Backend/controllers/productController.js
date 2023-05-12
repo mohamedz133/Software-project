@@ -1,5 +1,5 @@
 import {Products} from "../models/productModel.js";
-import { category } from "../models/categoryModel.js";
+import {  category } from "../models/categoryModel.js";
 import mongoose from "mongoose"
 
 
@@ -10,10 +10,13 @@ const getAllProducts = async (req, res) => {
     if(!page)page=1;
     if(!limit)limit=10;
     let filter={};
-    if(req.query.Categories){
-         filter =req.query.Categories,split(',');
+    let validCategory=["men","women","kids"];
+    let category=req.query.Categories;
+    if(category&&validCategory.includes(category)){
+         filter =req.query.Categories;
+         const products= await products.find({category:filter}).populate("category").sort({sort:asc}).skip(skip).limit(limit);
     }
-    const products= await products.find({category:filter}).populate("category").sort({sort:asc}).skip(skip).limit(limit);
+    const products= await products.find().populate("category").sort({sort:asc}).skip(skip).limit(limit);
     if(!products){
         res.status(500).json({success:false});
     }
@@ -30,7 +33,7 @@ const getOneProduct = async (req, res) => {
 }
 
 const createProduct= async (req, res) => {
-    const category=await Category.findById(req.body.category);
+    const category=await category.findById(req.body.category);
     if(!category){
         return res.status(400).send("invalid category")
     };

@@ -10,6 +10,7 @@ const productSchema = new mongoose.Schema({
     seller_id: {type: Number, required: true},
     rating: {type: Number},
     colors: {type: Array},
+    category:{ type:String,re:"category"},
     department: {type: String, required: true},
 countInStack:{type:Number,
     required:true,
@@ -17,11 +18,8 @@ countInStack:{type:Number,
     max:255
 
 },
-rating:{
-    type:Number,
-    default:0
-},
-
+category:{type:String,required:true,
+ref:"category",},
 
 });
 
