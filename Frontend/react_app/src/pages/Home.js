@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-//import './fontawesome.min.css';
+import './css/fontawesome.min.css';
 import './css/Home.css';
 
 function App() {
