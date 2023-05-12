@@ -10,7 +10,7 @@ function About() {
             <div class="container">
                 <div class="box">
                     <div className="data">
-                        <img src="../imgs/Ibrahim_Elsheikh.jpg" alt=""/>
+                        <div class="personal_photo"></div>
                         <div class="social">
                             <a href="https://www.facebook.com/ibrahelsheikh" target="_blank">
                                 <i className="fab fa-facebook-f"></i>
