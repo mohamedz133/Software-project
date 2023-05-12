@@ -1,5 +1,5 @@
 import React  from "react";
-import {Link,NavLink} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 function Navigation(){
     return(
@@ -10,6 +10,10 @@ function Navigation(){
             <nav>
                 <ul>
                     <li>
+                        <Link to="/Login">login/Register</Link>
+                    </li>
+
+                    <li>
                         <Link to="/">Home</Link>
                     </li>
                     <li>
@@ -19,10 +23,7 @@ function Navigation(){
                     <li>
                         <Link to="/Contactus">Contact Us</Link>
                     </li>
-                    <li>
-                        <Link to="/Login">login/register</Link>
-                    </li>
-                </ul>
+                           </ul>
             </nav>
         </header>
     );
