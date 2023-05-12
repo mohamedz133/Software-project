@@ -40,7 +40,7 @@ const upadteCategory= async(req,res)=>{
         color:req.body.color,
     },{new:true})
     if(!category)
-    return res.status(404).send("the category is not upadted ");
+    return res.status(404).send("the category is not  upadted ");
     res.send(category);
 
  }
