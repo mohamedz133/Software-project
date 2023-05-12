@@ -1,0 +1,231 @@
+
+.header .nav{
+  width: 60%;
+  float: left;
+  list-style: none;
+}
+
+.header .nav li{
+  display: inline-block;
+}
+
+
+
+
+
+.header .nav li a{
+  background-color: #008CBA ;
+  color:white;
+  font-size: 20px;
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 10%;
+  margin:20% 5% ;
+
+
+  
+
+}
+.header .nav li a:hover{ background-color: green}
+
+
+.clear{
+  clear: both;
+}
+
+
+
+.product {
+  width:40%;
+  max-width: 400px;
+  /* background-color: #f8f9fa; */
+  padding:  20px ;
+  
+  box-shadow: 0 20px 20px rgba(0, 0, 120, 0.4);
+  margin-left: 3%;
+  margin-bottom: 3%;
+}
+
+.product1{
+  height: 200px;
+  width:60%;
+  max-width: 300px;
+  background-image: url("../../imgs/JACKET.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+
+}
+
+.product2{
+  height: 200px;
+  width:60%;
+  max-width: 300px;
+  background-image: url("../../imgs/tshirt.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+
+}
+
+.product3{
+  height: 200px;
+  width:55%;
+  max-width: 300px;
+  background-image: url("../../imgs/hoody.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+
+}
+
+/* Women Clothes */
+
+.product4{
+  height: 200px;
+  width:55%;
+  max-width: 300px;
+  background-image: url("../../imgs/dress.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+
+}
+
+.product5{
+  height: 200px;
+  width:55%;
+  max-width: 300px;
+  background-image: url("../../imgs/skirt.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+
+}
+
+.product6{
+  height: 200px;
+  width:55%;
+  max-width: 300px;
+  background-image: url("../../imgs/women_pants.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+
+}
+
+
+/* Children Clothes*/
+
+
+.product7{
+  height: 200px;
+  width:55%;
+  max-width: 300px;
+  background-image: url("../../imgs/boys.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+
+}
+
+
+.product8{
+  height: 200px;
+  width:55%;
+  max-width: 300px;
+  background-image: url("../../imgs/girls.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+
+}
+
+.product9{
+  height: 200px;
+  width:55%;
+  max-width: 300px;
+  background-image: url("../../imgs/boys2.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+
+}
+
+/* product page css */
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+  .product-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .product-price{color:blue;}
+
+
+  /* shopping cart css */
+
+  /* تنسيق عناصر السلة */
+
+.cart-container h1{
+  color:green;
+  text-align: center;
+  margin-top: 100px;
+}
+
+
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  /* تنسيق زر الإزالة */
+  .remove-item-btn {
+    background-color: red;
+    color: white;
+    border: 2px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  
+  /* تنسيق زر الشراء */
+
+  .cart-total p {
+
+    margin-top: 10px;
+    margin-left:40%;
+    font-weight: bold;
+    font-size: 30px;
+    color:blue;
+  }
+  .checkout-btn {
+    margin-top: 10px;
+    margin-left:45%;
+    background-color: #008CBA;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    height: 50px;
+    width: 90px;
+    border-radius: 10%;
+ 
+  }
+ 
+.checkout-btn:hover{ background-color: green}
+
+.add-to-cart-btn:hover{
+  cursor: pointer;
+  background-color: rgb(132, 175, 240);
+}
