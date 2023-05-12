@@ -5,15 +5,15 @@ import "./css/normalize.css";
 
 function About() {
     return (
-        <div class="team" id="team">
+        <div className="team" id="team">
             <h2 class="main-title">Team Members</h2>
             <div class="container">
                 <div class="box">
-                    <div class="data">
+                    <div className="data">
                         <img src="../imgs/Ibrahim_Elsheikh.jpg" alt=""/>
                         <div class="social">
                             <a href="https://www.facebook.com/ibrahelsheikh" target="_blank">
-                                <i class="fab fa-facebook-f"></i>
+                                <i className="fab fa-facebook-f"></i>
                             </a>
                             <a href="https://twitter.com/ibrahelsheikh/" target="_blank">
                                 <i class="fab fa-twitter"></i>
@@ -94,7 +94,7 @@ function About() {
                             <a href="https://www.linkedin.com/in/abohend/" target="_blank">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
-                            <a href="#">
+                            <a href="https://github.com/Abohend" target="_blank">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -118,7 +118,7 @@ function About() {
                             <a href="#">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
-                            <a href="#">
+                            <a href="https://github.com/Mohammedfekri" target="_blank">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -171,7 +171,7 @@ function About() {
                         </div>
                     </div>
                     <div class="info">
-                        <h3>Omer albaz</h3>
+                        <h3>Omer Elbaz</h3>
                         <p>Backend</p>
                     </div>
                 </div>
@@ -179,9 +179,6 @@ function About() {
             </div>
         </div>
     );
-
-
 }
 
 export default About;
-
