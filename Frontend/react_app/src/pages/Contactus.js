@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './Contactus.css';
+import './css/Contactus.css';
 
 function ContactPage() {
     const [name, setName] = useState('');
@@ -15,7 +15,7 @@ function ContactPage() {
         <div className="contactus" id="contactus">
             <div className="form">
                 <div className="content">
-                    <h2>Request A Discount</h2>
+                    <h2>Contact Us</h2>
                     <form action="">
                         <input
                             className="input"
