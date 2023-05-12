@@ -53,7 +53,7 @@ function LoginForm() {
                     </div>
                 </form>
                 <div className="transmit">
-                    <a href="/Signup">
+                    <a href="/Register">
                         <button type="submit" id="signupBtn">
                             Sign up
                         </button>
