@@ -6,4 +6,4 @@ npm install dotenv
 npm i morgan 
 npm i mongoose
 npm i express-validator
-npm i bcrypt
+npm i nodemon

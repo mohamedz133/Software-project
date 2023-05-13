@@ -1,6 +1,5 @@
 import {Products} from "../models/productModel.js";
-import {  category } from "../models/categoryModel.js";
-import mongoose from "mongoose"
+import mongoose from "mongoose";
 
 
 
@@ -14,9 +13,9 @@ const getAllProducts = async (req, res) => {
     let category=req.query.Categories;
     if(category&&validCategory.includes(category)){
          filter =req.query.Categories;
-         const products= await products.find({category:filter}).populate("category").sort({sort:asc}).skip(skip).limit(limit);
+         const products= await Products.find({category:filter}).populate("category").sort({sort:asc}).skip(skip).limit(limit);
     }
-    const products= await products.find().populate("category").sort({sort:asc}).skip(skip).limit(limit);
+    const products= await Products.find().populate("category").sort({sort:asc}).skip(skip).limit(limit);
     if(!products){
         res.status(500).json({success:false});
     }
@@ -24,7 +23,7 @@ const getAllProducts = async (req, res) => {
 };
 const getOneProduct = async (req, res) => {
     try {
-        const Products = await products.findById(req.params.id).populate("category");
+        const products = await Products.findById(req.params.id).populate("category");
         res.json(products);
     } catch (error) {
         console.log(error);
@@ -33,11 +32,6 @@ const getOneProduct = async (req, res) => {
 }
 
 const createProduct= async (req, res) => {
-    const category=await category.findById(req.body.category);
-    if(!category){
-        return res.status(400).send("invalid category")
-    };
-
     const products= new Products({
         name: req.body.name,
         img: req.body.img,
@@ -52,14 +46,14 @@ const createProduct= async (req, res) => {
     category:req.body.category,
     
     });
-    products=await products.save();
+    await Products.save();
     if(!products)
     return res.status(404).send("the product is not created ");
     res.send(products);
 
 };
 const deleteProduct=async(req,res)=>{
-    products=await products.findByIdAndRemove(req.params.id).then(
+    const products=await Products.findByIdAndRemove(req.params.id).then(
         products=>{
             if(products){
                 return res.status(200).json({success:true},{message:"the product is deleted"})
@@ -76,11 +70,11 @@ const upadteProduct= async(req,res)=>{
    { return res.status(400).send("invalid id")
 
    }
-    const products=await products.findById(req.body.category);
+    const products = await Products.findById(req.body.category);
     if(!products){
         return res.status(400).send("invalid product")
     };
-    products=await products.findByIdAndUpadte(req.params.id,{
+    products = await Products.findByIdAndUpadte(req.params.id,{
             name: req.body.name,
             img: req.body.img,
             description: req.body.description,

@@ -5,7 +5,6 @@ import dbconn from "./config/dbconnection.js";
 
 import {ProductsRouter} from "./routes/productRoute.js";
 import { UsersRouter } from "./routes/userRoute.js";
-import { categoryRouter } from "./routes/categoryRoute.js";
 
 // Load env variables
 dotenv.config({}); 
@@ -25,7 +24,6 @@ app.use(express.json());
 // mount routes
 app.use(ProductsRouter);
 app.use(UsersRouter);
-app.use(categoryRouter)
 
 // Listen to port
 const port = process.env.PORT || 3000;
