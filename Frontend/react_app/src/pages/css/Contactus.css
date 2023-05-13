@@ -1,0 +1,76 @@
+
+.contactus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 100px 0;
+}
+
+.contactus .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+@media (max-width: 991px) {
+    .contactus .form {
+        flex-basis: 100%;
+    }
+}
+
+.contactus .form input,
+textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+    padding: 15px;
+    border: none;
+    border: 1px solid var(--main-color);
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    caret-color: var(--main-color);
+    outline: none;
+}
+
+.contactus .form textarea {
+    resize: none;
+    height: 200px;
+}
+
+.contactus .form [type="submit"] {
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+
+.contactus .form [type="submit"]:hover {
+    background-color: var(--main-color-alt);
+}
+
+.contactus .content {
+    text-align: center;
+}
+
+.contactus .content h2 {
+    font-size: 40px;
+    letter-spacing: -2px;
+}
+
+.contactus .content p {
+    line-height: 1.6;
+    font-size: 18px;
+    max-width: 500px;
+}
+
+.contactus .content img {
+    width: 300px;
+}
+

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import "./Contactus.css";
+import React, {useState} from 'react';
+import './css/Contactus.css';
 
 function ContactPage() {
     const [name, setName] = useState('');
@@ -12,22 +12,37 @@ function ContactPage() {
     };
 
     return (
-        <div>
-            <h1>Contact Us</h1>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="name">Name:</label>
-                <input type="text" id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} required /><br />
+        <div className="contactus" id="contactus">
+            <div className="form">
+                <div className="content">
+                    <h2>Contact Us</h2>
+                    <form action="">
+                        <input
+                            className="input"
+                            type="text"
+                            placeholder="Your Name"
+                            name="name"
+                        />
+                        <input
+                            className="input"
+                            type="email"
+                            placeholder="Your Email"
+                            name="email"
+                        />
 
-                <label htmlFor="email">Email:</label>
-                <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} required /><br />
-
-                <label htmlFor="message">Message:</label>
-                <textarea id="message" name="message" value={message} onChange={(e) => setMessage(e.target.value)} required></textarea><br />
-
-                <button type="submit">Send Message</button>
-            </form>
+                        <textarea
+                            className="input"
+                            placeholder="Tell Us About Your Needs"
+                            name="message"
+                        ></textarea>
+                        <input type="submit" value="Send"/>
+                    </form>
+                </div>
+            </div>
         </div>
+
     );
 }
+
 
 export default ContactPage;

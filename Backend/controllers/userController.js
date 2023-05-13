@@ -58,12 +58,10 @@ const updateUser = async (req, res) => {
         // check if password field is empty
         if (!req.body.password)
         {
-            console.log("password deleted");
             delete req.body.password;
         } 
         else
         {
-            console.log("password hashed");
             req.body.password = await hash(req.body.password, 10);
         }
         const newUser = await Users.findByIdAndUpdate(req.params.id, req.body, {new: true});

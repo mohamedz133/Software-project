@@ -12,9 +12,16 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",
+<<<<<<< HEAD
+=======
+    "cookie-parser": "^1.4.6",
+>>>>>>> d7e029ee9dea60f3e38db2957c9c7e619eaea17e
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.0",
+    "mongodb": "^5.4.0",
+    "mongoose-unique-validator": "^4.0.0",
     "morgan": "^1.10.0"
   }
 }
