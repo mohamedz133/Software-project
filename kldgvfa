@@ -1,0 +1,258 @@
+[33mcommit 9c4e6a731c564f1db9640a26cb33a658dee3fb6d[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: abohend <mhmdabohend@gmail.com>
+Date:   Tue May 9 18:50:52 2023 +0300
+
+    Create a validtion layer for user
+
+[33mcommit 57ccd434424c3cb4e0286fe66b3b848f158b8fec[m
+Author: abohend <mhmdabohend@gmail.com>
+Date:   Mon May 8 19:01:10 2023 +0300
+
+    validate the email address
+
+[33mcommit b2ecc7bae57c0e726a843642b0b829d895f2ff84[m
+Author: abohend <mhmdabohend@gmail.com>
+Date:   Mon May 8 09:10:11 2023 +0300
+
+    Initiated User crud operation
+
+[33mcommit 1ffae7accad1de4d448327d73ceea7e71fcdd5e6[m
+Author: Ibrahim Elsheikh <77652042+ibrahelsheikh@users.noreply.github.com>
+Date:   Mon May 8 05:13:04 2023 +0300
+
+    Delete package-lock.json
+
+[33mcommit b373cb0efe878c2dae5de19e5ae36957dc3a8a71[m
+Merge: 9dbcc17 cd31919
+Author: Ibrahim Elsheikh <77652042+ibrahelsheikh@users.noreply.github.com>
+Date:   Mon May 8 05:11:36 2023 +0300
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 9dbcc178a062692a7ef4eb4b68e732bd627be110[m
+Author: Ibrahim Elsheikh <77652042+ibrahelsheikh@users.noreply.github.com>
+Date:   Mon May 8 05:11:24 2023 +0300
+
+    added .gitignore
+
+[33mcommit cd31919a13e77bf86512b267ede301fb42f1ce75[m
+Merge: efebb23 8a04865
+Author: Ibrahim Elsheikh <77652042+ibrahelsheikh@users.noreply.github.com>
+Date:   Sat May 6 09:01:27 2023 +0300
+
+    Merge pull request #9 from pythonmad/master
+    
+    show and hide password , little styling
+
+[33mcommit 8a0486574588348029348a624fbdf95a50774bc3[m
+Author: Mohamed Zaki <mohammed31038890@f-eng.tanta.edu.eg>
+Date:   Sat May 6 07:42:30 2023 +0200
+
+    login and signup pages are separated referring to each other
+
+[33mcommit efebb231433e8461d25423b3c11f5b6252555a32[m
+Author: abohend <mhmdabohend@gmail.com>
+Date:   Sat May 6 07:29:12 2023 +0300
+
+    initiates CRUD operation for product project
+
+[33mcommit 62638bb81f6e90c4391db202b524d139f08d4be9[m
+Author: Mohamed Zaki <mohammed31038890@f-eng.tanta.edu.eg>
+Date:   Sat May 6 04:04:32 2023 +0200
+
+    login and signup pages are separated referring to each other
+
+[33mcommit 6c9234d68199fb89f3c5d2604f4d3db273e4884a[m
+Merge: f34ce2c 62638bb
+Author: Ibrahim Elsheikh <77652042+ibrahelsheikh@users.noreply.github.com>
+Date:   Sat May 6 04:24:17 2023 +0300
+
+    Merge pull request #8 from pythonmad/master
+    
+    login and signup pages are separated referring to each other
+
+[33mcommit f34ce2cb75947c2adff6299326deb52f5f18adfd[m
+Merge: bb25076 b907572
+Author: Ibrahim Elsheikh <77652042+ibrahelsheikh@users.noreply.github.com>
+Date:   Sat May 6 02:33:35 2023 +0300
+
+    Merge pull request #7 from ahmedeida77/master
+    
+    Add files via upload
+
+[33mcommit b907572e24dfd32f59b2c834d07cf1b01ee08a98[m
+Author: ahmed eida <126417793+ahmedeida77@users.noreply.github.com>
+Date:   Sat May 6 02:23:32 2023 +0300
+
+    Add files via upload
+
+[33mcommit bb25076ead9092b7f1ce4178e692ec2ae7620146[m
+Author: abohend <mhmdabohend@gmail.com>
+Date:   Thu May 4 21:05:12 2023 +0300
+
+    orgnized files
+
+[33mcommit adff3cfe316458ad5b8f4ed597da8d69520ce0a9[m
+Merge: 0a3d268 e914aaa
+Author: Ibrahim Elsheikh <77652042+ibrahelsheikh@users.noreply.github.com>
+Date:   Thu May 4 08:49:08 2023 +0300
+
+    Merge pull request #6 from pythonmad/master
+    
+    now page is responsive for many screens
+
+[33mcommit e914aaa2f5bcadb1b5cfeb4a83b9320da4736cf0[m
+Author: Mohamed Zaki <mohammed31038890@f-eng.tanta.edu.eg>
+Date:   Thu May 4 01:27:12 2023 +0200
+
+    add picture to login page
+
+[33mcommit 4acd88a5f54108c479860e5017c6f1ed5d3e7701[m
+Author: Mohamed Zaki <mohammed31038890@f-eng.tanta.edu.eg>
+Date:   Thu May 4 01:24:29 2023 +0200
+
+    add picture to login page
+
+[33mcommit 0a3d268bb15152c45e800493bc764b107c116ddf[m
+Author: Mohamed Abohend <97126553+Abohend@users.noreply.github.com>
+Date:   Wed May 3 17:40:54 2023 +0300
+
+    Delete config.env
+
+[33mcommit 109a2460ff4b2545596cf9f34d8457a90cb4f42e[m
+Author: abohend <mhmdabohend@gmail.com>
+Date:   Wed May 3 17:38:44 2023 +0300
+
+    ignore the configration file
+
+[33mcommit 9fea581c4f32f8d4553663c56a06bc05ae9dde37[m
+Merge: 8b6a35d e146349
+Author: abohend <mhmdabohend@gmail.com>
+Date:   Wed May 3 17:31:15 2023 +0300
+
+    Merge branch 'master' of https://github.com/ibrahelsheikh/Software-project
+
+[33mcommit 8b6a35da507bf82c03e3b79ac8b2d034f7848566[m
+Author: abohend <mhmdabohend@gmail.com>
+Date:   Wed May 3 17:21:15 2023 +0300
+
+    connected to DB
+
+[33mcommit e14634966bd7a5dd9d0af0e388421f8db788b949[m
+Author: Mohamed Abohend <97126553+Abohend@users.noreply.github.com>
+Date:   Wed May 3 14:26:50 2023 +0300
+
+    Delete Backend/node_modules directory
+
+[33mcommit 49bc7028d5a8e5e09a473c97249497955787ade9[m
+Merge: adbfbe1 1a5b02e
+Author: Mohamed Zaki <mohammed31038890@f-eng.tanta.edu.eg>
+Date:   Wed May 3 02:59:09 2023 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit adbfbe1e636a8363aa8dcc38902c90183ae375a0[m
+Author: Mohamed Zaki <mohammed31038890@f-eng.tanta.edu.eg>
+Date:   Wed May 3 02:58:30 2023 +0200
+
+    add picture to login page
+
+[33mcommit e6f3b3d025762ed271ac898ab8f9c5dd0e1a6da9[m
+Author: Mohamed Zaki <mohammed31038890@f-eng.tanta.edu.eg>
+Date:   Wed May 3 02:36:29 2023 +0200
+
+    login page is developed
+
+[33mcommit e9b7d50e99ff8fc7a4eaef3417a7c34018323760[m
+Merge: 86b7fc2 49bc702
+Author: Ibrahim Elsheikh <77652042+ibrahelsheikh@users.noreply.github.com>
+Date:   Wed May 3 03:03:04 2023 +0300
+
+    Merge pull request #5 from pythonmad/master
+    
+    image added
+
+[33mcommit 86b7fc2a01e2c79a6e26aab258aa8a1ea27b5702[m
+Merge: d8e1346 1a5b02e
+Author: Ibrahim Elsheikh <77652042+ibrahelsheikh@users.noreply.github.com>
+Date:   Wed May 3 02:48:28 2023 +0300
+
+    Merge pull request #4 from pythonmad/master
+    
+    login page is developed
+
+[33mcommit 1a5b02e9e1e7192268e4be61a7eb20b95ae9c43a[m
+Merge: e6f3b3d d8e1346
+Author: Ibrahim Elsheikh <77652042+ibrahelsheikh@users.noreply.github.com>
+Date:   Wed May 3 02:48:18 2023 +0300
+
+    Merge branch 'master' into master
+
+[33mcommit d8e13469c375141a0c9ac0ee83c792457af2dd97[m
+Author: Ibrahim Elsheikh <77652042+ibrahelsheikh@users.noreply.github.com>
+Date:   Wed May 3 01:01:54 2023 +0300
+
+    fixed css file
+
+[33mcommit 922ddc0ed95732223d30dca897bc450ff9de6033[m
+Merge: 03cc0a9 6bb7da0
+Author: Mohamed Zaki <104945409+pythonmad@users.noreply.github.com>
+Date:   Tue May 2 18:33:43 2023 +0300
+
+    Merge pull request #2 from ibrahelsheikh/master
+    
+    contactus.js added
+
+[33mcommit 6bb7da02b2479aa0c31682dfa110af78125b8969[m
+Author: Ibrahim Elsheikh <77652042+ibrahelsheikh@users.noreply.github.com>
+Date:   Tue May 2 18:20:36 2023 +0300
+
+    contactus.js added
+
+[33mcommit 03cc0a9fb31d42ef7927a0f8688de07a75f460a4[m
+Merge: 06a38a4 b63eb79
+Author: Mohamed Zaki <104945409+pythonmad@users.noreply.github.com>
+Date:   Tue May 2 17:03:09 2023 +0300
+
+    Merge pull request #1 from ibrahelsheikh/master
+    
+    UPDATE FILES
+
+[33mcommit b63eb79e58dbac5bc4447c39b6dccc74178824e7[m
+Author: Mohamed Abohend <97126553+Abohend@users.noreply.github.com>
+Date:   Tue May 2 09:54:59 2023 +0300
+
+    Delete react_app directory
+
+[33mcommit 9e009a7c55b25f00f60b0105ebdc8a47be09aabd[m
+Author: Mohamed Abohend <97126553+Abohend@users.noreply.github.com>
+Date:   Tue May 2 09:54:20 2023 +0300
+
+    Delete .gitignore
+
+[33mcommit 2680b5d4c7480c6b8281a84af01aa2c808defa69[m
+Author: Mohamed Abohend <97126553+Abohend@users.noreply.github.com>
+Date:   Tue May 2 09:54:07 2023 +0300
+
+    Delete README.md
+
+[33mcommit dc27168daab903afddb29107751f672ed474795f[m
+Author: Mohamed Abohend <97126553+Abohend@users.noreply.github.com>
+Date:   Tue May 2 09:53:47 2023 +0300
+
+    Delete README.md
+
+[33mcommit a9fb70a08a2a82d3413647d2aedb45bac9056309[m
+Author: abohend <mhmdabohend@gmail.com>
+Date:   Tue May 2 09:26:25 2023 +0300
+
+    made a simple express server
+
+[33mcommit 3706184bd278fca04d89f1315bb53dc3cc2eaa06[m
+Author: abohend <mhmdabohend@gmail.com>
+Date:   Tue May 2 08:48:42 2023 +0300
+
+    made a front end and backend folders
+
+[33mcommit 06a38a4113c9d3bc1f4a40aede918699b735184b[m
+Author: Mohamed Zaki <mohammed3103889

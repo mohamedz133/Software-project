@@ -1,4 +1,5 @@
 import {Users} from "../models/userModel.js";
+import { hash } from "bcrypt";
 
 // @desc    Get all users
 // @route   GET /api/users
@@ -9,7 +10,7 @@ const getUsers = async (req, res) => {
         res.json(users);
     } catch (error) {
         console.log(error);
-        res.status(500).json({message: "Server Error"});
+        res.status(500).json({error: error.message});
     }
 }
 
@@ -19,10 +20,14 @@ const getUsers = async (req, res) => {
 const createUser = async (req, res) => {
     try {
         const user = await Users.create(req.body);
+        if (!user)
+        {
+            return res.status(404).json({message: "User not found!"});
+        }
         res.json(user);
     } catch (error) {
         console.log(error);
-        res.status(500).json({message: error.message});
+        res.status(500).json({error: error.message});
     }
 }
 
@@ -32,10 +37,14 @@ const createUser = async (req, res) => {
 const getUserById = async (req, res) => {
     try {
         const user = await Users.findById(req.params.id);
+        if (!user)
+        {
+            return res.status(404).json({message: "User not found!"});
+        }
         res.json(user);
     } catch (error) {
         console.log(error);
-        res.status(500).json({message: error.message});
+        res.status(500).json({error: error.message});
     }
 }
 
@@ -44,11 +53,24 @@ const getUserById = async (req, res) => {
 // @access  Private
 const updateUser = async (req, res) => {
     try {
+        const user = await Users.findById(req.params.id);
+        if (!user) return res.status(404).json({message: "user not found"});
+        // check if password field is empty
+        if (!req.body.password)
+        {
+            console.log("password deleted");
+            delete req.body.password;
+        } 
+        else
+        {
+            console.log("password hashed");
+            req.body.password = await hash(req.body.password, 10);
+        }
         const newUser = await Users.findByIdAndUpdate(req.params.id, req.body, {new: true});
         res.json(newUser);
     } catch (error) {
         console.log(error);
-        res.status(500).json({message: "Cann't update user or user not found"});
+        res.status(500).json({error: error.message});
     }
     }
 
@@ -59,10 +81,14 @@ const updateUser = async (req, res) => {
 const deleteUser = async (req, res) => {
     try {
         const user = await Users.findByIdAndDelete(req.params.id);
+        if (!user)
+        {
+            return res.status(404).json({message: "User not found"});
+        }
         res.json(user);
     } catch (error) {
         console.log(error);
-        res.status(500).json({message: "User not found or cann't delete user"});
+        res.status(500).json({error: error.message});
     }
 }
 
