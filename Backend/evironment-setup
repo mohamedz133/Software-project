@@ -3,7 +3,7 @@
 npm init --yes
 npm install express --save
 npm install dotenv
-npm i morgan # middle ware
+npm i morgan 
 npm i mongoose
-npm install mongodb
 npm i express-validator
+npm i nodemon

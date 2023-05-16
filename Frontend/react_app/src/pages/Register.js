@@ -102,7 +102,7 @@ function Signup() {
                 <div className="transmit">
                     <Link to="/Login">
                         <button type="submit" id="signupBtn">
-                            Sign up
+                            Login
                         </button>
                     </Link>
                 </div>

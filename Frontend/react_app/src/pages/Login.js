@@ -49,7 +49,7 @@ function LoginForm() {
 
         <div className="container">
             <div className="form_sign">
-                <h1 id="title">Sign In</h1>
+                <h1 id="title">Login</h1>
                 <form onSubmit={handleLogin}>
                     <div className="input-group">
                         <div className="input-field">
@@ -72,7 +72,7 @@ function LoginForm() {
                     <div className="buttons">
                         <a href="/Home">
                             <button type="submit" id="signinBtn">
-                                Sign in
+                                Login
                             </button>
                         </a>
                     </div>
