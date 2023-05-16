@@ -2,17 +2,35 @@ import {Products} from "../models/productModel.js";
 import mongoose from "mongoose";
 
 
-
 const getAllProducts = async (req, res) => {
     try {
-        const products = await Products.find({});
-        res.json(products);
+        const category = req.query.category;
+        const page = parseInt(req.query.page) || 1;
+        const limit = 10;
+
+        const filter = {};
+        if (category) {
+            filter.category = category;
+        }
+
+        const totalProducts = await Products.countDocuments(filter);
+        const totalPages = Math.ceil(totalProducts / limit);
+
+        const products = await Products.find(filter)
+            .skip((page - 1) * limit)
+            .limit(limit);
+
+        res.json({
+            products,
+            currentPage: page,
+            totalPages,
+            totalProducts,
+        });
     } catch (error) {
         console.log(error);
         res.status(500).json({error: error.message});
     }
 }
-
 const getOneProduct =async (req, res) => {
     try {
         const product = await Products.findById(req.params.id);
