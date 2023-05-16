@@ -2,6 +2,15 @@ import React from "react";
 import "./css/all.min.css";
 import "./css/world.css";
 import "./css/normalize.css";
+import Ibrahim_Elsheikh from "../imgs/Ibrahim_Elsheikh.jpg";
+import Mohamed_Zaki from "../imgs/Mohamed_Zaki.jpg";
+import Ahmed_Eida from "../imgs/Ahmed_Eida.png";
+import Mohamed_Abohend from "../imgs/Mohamed_Abohend.jpg";
+import Mohamed_Essam from "../imgs/Mohamed_Essam.png";
+import Mohamed_fekry from "../imgs/Mohamed_Fekry.jpg";
+import Omer_Elbaz from "../imgs/Omer_Elbaz.png";
+
+
 
 function About() {
     return (
@@ -10,7 +19,7 @@ function About() {
             <div class="container">
                 <div class="box">
                     <div className="data">
-                        <div class="personal_photo"></div>
+                        <img src={Ibrahim_Elsheikh} alt=""/>
                         <div class="social">
                             <a href="https://www.facebook.com/ibrahelsheikh" target="_blank">
                                 <i className="fab fa-facebook-f"></i>
@@ -34,7 +43,7 @@ function About() {
 
                 <div class="box">
                     <div class="data">
-                        <img src="../imgs/Mohamed_Zaki.jpg" alt=""/>
+                        <img src={Mohamed_Zaki} alt=""/>
                         <div class="social">
                             <a href="https://www.facebook.com/profile.php?id=100061866082752"
                                target="_blank">
@@ -59,7 +68,7 @@ function About() {
                 </div>
                 <div class="box">
                     <div class="data">
-                        <img src="../imgs/Ahmed_Eida.png" alt=""/>
+                        <img src={Ahmed_Eida} alt=""/>
                         <div class="social">
                             <a href="https://www.facebook.com/profile.php?id=100006536280657" target="_blank">
                                 <i class="fab fa-facebook-f"></i>
@@ -83,7 +92,7 @@ function About() {
 
                 <div class="box">
                     <div class="data">
-                        <img src="../imgs/Mohamed_Abohend.jpg" alt=""/>
+                        <img src={Mohamed_Abohend} alt=""/>
                         <div class="social">
                             <a href="#">
                                 <i class="fab fa-facebook-f"></i>
@@ -107,7 +116,7 @@ function About() {
 
                 <div class="box">
                     <div class="data">
-                        <img src="../imgs/Mohamed_Fekry.jpg" alt=""/>
+                        <img src={Mohamed_fekry} alt=""/>
                         <div class="social">
                             <a href="#">
                                 <i class="fab fa-facebook-f"></i>
@@ -130,7 +139,7 @@ function About() {
                 </div>
                 <div class="box">
                     <div class="data">
-                        <img src="../imgs/Mohamed_Essam.png" alt=""/>
+                        <img src={Mohamed_Essam} alt=""/>
                         <div class="social">
                             <a href="https://www.facebook.com/profile.php?id=100009035405075"
                                target="_blank">
@@ -154,7 +163,7 @@ function About() {
                 </div>
                 <div class="box">
                     <div class="data">
-                        <img src="../imgs/Omer_Elbaz.png" alt=""/>
+                        <img src={Omer_Elbaz} alt=""/>
                         <div class="social">
                             <a href="https://www.facebook.com/Omar.Albaz001" target="_blank">
                                 <i class="fab fa-facebook-f"></i>
