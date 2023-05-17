@@ -16,7 +16,7 @@ class  App extends Component {
                 <Navigation/>
             <Routes>
 
-                <Route path="/" Component={Home}></Route>
+                <Route path="/" EXACT Component={Home}></Route>
                 <Route path="/About" Component={About}></Route>
                 <Route path="/Login" Component={Login}></Route>
                 <Route path="/Contactus" Component={Contactus}></Route>

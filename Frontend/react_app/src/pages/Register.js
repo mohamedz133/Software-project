@@ -11,6 +11,12 @@ function Signup() {
         setPasswordVisible(!passwordVisible);
     };
 
+
+
+
+
+
+
     const handleSignup = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -18,29 +24,22 @@ function Signup() {
         const lastName = form.lastName.value;
         const email = form.email.value;
         const password = form.password.value;
-        const url = "https://example.com/signup";
         const data = { firstName, lastName, email, password };
-        fetch(url, {
+
+        fetch("http://localhost:3000/api/auth/signup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(data),
-        })
-            .then((response) => {
-                if (response.ok) {
-                    // Sign up successful
-                    alert("Sign up successful!");
-                } else {
-                    // Sign up failed
-                    alert("Check user inserted data");
-                }
-            })
-            .catch((error) => {
-                console.error(error);
-                alert("An error occurred while signing up.");
-            });
+            body: JSON.stringify(data)
+
+
+        });
     };
+
+
+
+
 
     return (
         <div className="container">
