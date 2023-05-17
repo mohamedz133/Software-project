@@ -7,7 +7,7 @@ import Mohamed_Zaki from "../imgs/Mohamed_Zaki.jpg";
 import Ahmed_Eida from "../imgs/Ahmed_Eida.png";
 import Mohamed_Abohend from "../imgs/Mohamed_Abohend.jpg";
 import Mohamed_Essam from "../imgs/Mohamed_Essam.png";
-import Mohamed_fekry from "../imgs/Mohamed_Fekry.jpg";
+import Mohamed_Fekry from "../imgs/Mohamed_Fekry.jpg";
 import Omer_Elbaz from "../imgs/Omer_Elbaz.png";
 
 
@@ -116,7 +116,7 @@ function About() {
 
                 <div class="box">
                     <div class="data">
-                        <img src={Mohamed_fekry} alt=""/>
+                        <img src={Mohamed_Fekry} alt=""/>
                         <div class="social">
                             <a href="#">
                                 <i class="fab fa-facebook-f"></i>
