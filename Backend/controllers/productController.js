@@ -1,16 +1,19 @@
 import {Products} from "../models/productModel.js";
 import mongoose from "mongoose";
 
-
+// @desc    Get all products
+// @route   GET /api/products
+// @access  public
 const getAllProducts = async (req, res) => {
     try {
-        const category = req.query.category;
+        const department = req.query.department;
         const page = parseInt(req.query.page) || 1;
-        const limit = 10;
-
+        // num of docs that i will return 
+        const limit = parseInt(req.query.limit)|| 10;
+        // filtering for dep {men,womam,kids}
         const filter = {};
-        if (category) {
-            filter.category = category;
+        if (department) {
+            filter.department = department;
         }
 
         const totalProducts = await Products.countDocuments(filter);
@@ -31,6 +34,9 @@ const getAllProducts = async (req, res) => {
         res.status(500).json({error: error.message});
     }
 }
+// @desc    Get product by id
+// @route   GET /api/products/:id
+// @access  Private
 const getOneProduct =async (req, res) => {
     try {
         const product = await Products.findById(req.params.id);
@@ -44,7 +50,9 @@ const getOneProduct =async (req, res) => {
         res.status(500).json({error: error.message});
     }
 }
-
+// @desc    Create products
+// @route   POST /api/products
+// @access  Private
 const createProduct=  async (req, res) => {
     try {
         const product = await Products.create(req.body);
@@ -58,29 +66,37 @@ const createProduct=  async (req, res) => {
         res.status(500).json({error: error.message});
     }
 }
+// @desc    Delete product
+// @route   DELETE /api/products/:id
+// @access  Private
 const deleteProduct=async(req,res)=>{
-    const products=await Products.findByIdAndRemove(req.params.id).then(
-        products=>{
-            if(products){
-                return res.status(200).json({success:true},{message:"the product is deleted"})
-            }else{
-                return res.status(404).json({success:false,message:"the product is not found "})
+    try{
+    const products=await Products.findByIdAndRemove(req.params.id);
+            if(!products){
+                return res.status(404).json({message:"the product is not found "})
             }
+            res.json(products);
+        } catch (error) {
+            console.log(error);
+            res.status(500).json({error: error.message});
         }
-    ).catch(err=>{
-        return res.status(400).json({success:false,error:err})
-    })
 }
+// @desc    Update products
+// @route   PUT /api/products/:id
+// @access  Private
 const upadteProduct= async(req,res)=>
 {
+    try{
     const products = await Products.findById(req.body.id);
     if(!products){
-        return res.status(400).send("invalid product")
+        return res.status(404).send("invalid product")
     };
     products = await Products.findByIdAndUpadte(req.params.id, req.body, {new: true})
-    if(!products)
-    return res.status(404).send("the product is not upadted ");
-    res.send(products);
+    res.json(products);
+      }catch (error) {
+        console.log(error);
+        res.status(500).json({error: error.message});
+    }
 
  }
 
