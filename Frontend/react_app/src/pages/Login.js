@@ -14,11 +14,11 @@ function LoginForm() {
     };
 
     const handleLogin = (event) => {
-        event.preventDefault();
+
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        const url = "https://example.com/Login";
+        const url = "http://localhost:3000/api/auth/login";
         const data = {  email, password };
         fetch(url, {
             method: "POST",
@@ -27,19 +27,7 @@ function LoginForm() {
             },
             body: JSON.stringify(data),
         })
-            .then((response) => {
-                if (response.ok) {
-                    // Sign up successful
-                    alert("Login successful!");
-                } else {
-                    // Sign up failed
-                    alert("incorrect Email or Password");
-                }
-            })
-            .catch((error) => {
-                console.error(error);
-                alert("An error occurred while Logging in .");
-            });
+
     };
 
 
@@ -79,9 +67,9 @@ function LoginForm() {
                     <div>
                         <b className="reset">
                             forget password{' '}
-                            <a href="#" rel="noopener noreferrer">
+                            <Link to="#" rel="noopener noreferrer">
                                 click here
-                            </a>
+                            </Link>
                         </b>
                     </div>
                 </form>
