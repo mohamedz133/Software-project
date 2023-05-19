@@ -67,7 +67,7 @@ function LoginForm() {
                     <div>
                         <b className="reset">
                             forget password{' '}
-                            <Link to="#" rel="noopener noreferrer">
+                            <Link to="/Reset_Password" rel="noopener noreferrer">
                                 click here
                             </Link>
                         </b>
