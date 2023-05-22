@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const ProductPage = (productid) => {
+const ProductPage = ({ productid }) => { // Add curly braces around productid
     const [product, setProduct] = useState({});
 
     useEffect(() => {
@@ -12,19 +12,28 @@ const ProductPage = (productid) => {
             .catch(error => {
                 console.error(error);
             });
-    }, []);
+    }, [productid]); // Include productid as a dependency in the dependency array
 
     // Render the product information
     return (
         <div className="single-product">
             <div className="container">
                 <div className="data">
-                    <img src={product.image} alt={product.description}/>
+                    <img src={product.image} alt={product.description} />
                 </div>
                 <div className="info">
                     <h3>{product.description}</h3>
                     <p>Price: {product.price}</p>
-                    <button className="add-to-cart-btn" data-product-id="1" onClick={(e) => { e.preventDefault(); addToCart(getProductFromButton(e.target)); }}>Add to Cart</button>
+                    <button
+                        className="add-to-cart-btn"
+                        data-product-id="1"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            addToCart(getProductFromButton(e.target));
+                        }}
+                    >
+                        Add to Cart
+                    </button>
                 </div>
             </div>
         </div>

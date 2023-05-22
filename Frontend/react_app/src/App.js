@@ -7,6 +7,8 @@ import Contactus from "./pages/Contactus";
 import Navigation from './components/Navigation';
 import Register from "./pages/Register";
 import Reset_Password from './components/Reset_Password';
+import HomeNew from "./pages/Home-New";
+
 
 class  App extends Component {
     render() {
@@ -16,7 +18,7 @@ class  App extends Component {
                 <Navigation/>
             <Routes>
 
-                <Route path="/" EXACT Component={Home}></Route>
+                <Route path="/" EXACT Component={HomeNew}></Route>
                 <Route path="/About" Component={About}></Route>
                 <Route path="/Login" Component={Login}></Route>
                 <Route path="/Contactus" Component={Contactus}></Route>

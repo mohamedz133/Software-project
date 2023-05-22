@@ -9,6 +9,10 @@
   display: inline-block;
 }
 
+
+
+
+
 .header .nav li a{
   background-color: #008CBA ;
   color:white;
@@ -19,6 +23,10 @@
   cursor: pointer;
   border-radius: 10%;
   margin:20% 5% ;
+
+
+  
+
 }
 .header .nav li a:hover{ background-color: green}
 
@@ -26,6 +34,8 @@
 .clear{
   clear: both;
 }
+
+
 
 .product {
   width:40%;
