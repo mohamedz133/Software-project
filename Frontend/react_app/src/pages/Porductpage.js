@@ -5,7 +5,7 @@ const ProductPage = (productid) => {
     const [product, setProduct] = useState({});
 
     useEffect(() => {
-        axios.get('https://localhost:3000/products/' + productid + '/')
+        axios.get('https://localhost:3000/api/products/:' + productid + '/')
             .then(response => {
                 setProduct(response.data);
             })
