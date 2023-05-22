@@ -1,4 +1,5 @@
 import express from "express";
+import expressAsyncHandler from "express-async-handler";
 import {getAllProducts,getOneProduct,createProduct,deleteProduct,upadteProduct} from "../controllers/productController.js";
 import {createProductValidator,updateProductValidator,deleteProductValidator,getProductValidator } from "../validators/productValidator.js";
 
