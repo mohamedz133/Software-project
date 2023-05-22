@@ -5,7 +5,7 @@ const userSchema = new mongoose.Schema({
     fname: {type: String, required: true, minlength: 2, maxlength: 20},
     lname: {type: String, required: true, minlength: 2, maxlength: 20},
     email: {type: String, required: true, unique: true, lowercase: true},
-    password: { type: String, required: true},
+    password: {type: String, required: true},
     phone: {type: String, uinque: true},
     img: {type: String},
     rule: {
@@ -22,7 +22,7 @@ const userSchema = new mongoose.Schema({
 
 // hash password (note: to use this => don't use arrow function)
 userSchema.pre("save", async function (next) {
-    this.password = await hash(this.password, 10);
+    this.password = await hash(this.password, 10); 
     next();
 })
 

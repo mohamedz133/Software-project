@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import morgan from "morgan";
 import dbconn from "./config/dbconnection.js";
-import cors from "cors"
+
 import {ProductsRouter} from "./routes/productRoute.js";
 import { UsersRouter } from "./routes/userRoute.js";
 
@@ -14,9 +14,7 @@ dbconn();
 
 // Initialize express
 const app = express();
-app.use(cors({
-    origin: 'http://localhost:3001'
-}));
+
 // Middlewares
 if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
@@ -32,4 +30,3 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
 });
-

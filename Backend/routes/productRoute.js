@@ -9,6 +9,6 @@ ProductsRouter.route("/api/products").get(getAllProducts);
 ProductsRouter.route("/api/products/:id").get(getProductValidator,getOneProduct);
 ProductsRouter.route("/api/products").post(createProductValidator,createProduct);
 
-ProductsRouter.route("/api/products/:id").delete(deleteProductValidator,deleteProduct);
-ProductsRouter.route("/api/products/:id").put(updateProductValidator,upadteProduct);
+ProductsRouter.route("/api/products/:id").delete(deleteProduct);
+ProductsRouter.route("/api/products/:id").put(upadteProduct);
 export {ProductsRouter};
