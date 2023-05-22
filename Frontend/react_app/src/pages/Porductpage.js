@@ -5,7 +5,7 @@ const ProductPage = ({ productid }) => { // Add curly braces around productid
     const [product, setProduct] = useState({});
 
     useEffect(() => {
-        axios.get(`https://localhost:3000/api/products/${productid}/`) // Use template literals for the URL
+        axios.get('https://localhost:3000/api/products/:' + productid + '/')
             .then(response => {
                 setProduct(response.data);
             })
