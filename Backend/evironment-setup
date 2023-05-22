@@ -7,3 +7,5 @@ npm i morgan
 npm i mongoose
 npm i express-validator
 npm i nodemon
+npm i jsonwebtoken
+npm i cookie-parser

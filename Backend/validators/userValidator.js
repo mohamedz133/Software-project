@@ -1,4 +1,4 @@
-import {check} from "express-validator";
+import {check} from "express-validator"; 
 import {validator} from "../middlewares/errorValidator.js";
 
 const userIdValidator = [
