@@ -46,6 +46,7 @@ const protect = async(req, res, next) => {
 
     // next layer to check admin or user 
     // get all users or create user
+    console.log(req.path);
     if (req.path == "/api/users")
     {
         if (rule != "admin")

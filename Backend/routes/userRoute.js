@@ -4,7 +4,12 @@ import { userIdValidator, createUserValidator, updateUserValidator} from "../val
 import {protect} from "../middlewares/routeProtector.js";
 const UsersRouter = express.Router();
 
-UsersRouter.route("/api/users").get(getUsers).post(protect,createUserValidator, createUser);
-UsersRouter.route("/api/users/:id").get(protect,userIdValidator, getUserById).put(protect,updateUserValidator, updateUser).delete(protect,userIdValidator, deleteUser);
+UsersRouter.route("/api/users")
+    .get(protect, getUsers)
+    .post(protect,createUserValidator, createUser);
+UsersRouter.route("/api/users/:id")
+    .get(protect,userIdValidator, getUserById)
+    .put(protect,updateUserValidator, updateUser)
+    .delete(protect,userIdValidator, deleteUser);
 
 export {UsersRouter};
