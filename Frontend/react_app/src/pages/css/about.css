@@ -1,9 +1,4 @@
-/* Start Global Rules */
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+
 :root {
   --main-color: #000e62;
   --main-color-alt: #4d1c43;
@@ -178,71 +173,6 @@ header > nav > ul > li > a:hover {
 }
 header > nav > ul > li > a:hover::before {
   left: 0;
-}
-.mega-menu {
-  margin-top: 5px;
-  width: auto;
-  position: absolute;
-  left: 50%;
-  padding: 20px 0;
-  border-bottom: 4px solid var(--main-color);
-  display: flex;
-  gap: 20px;
-  z-index: -1;
-  opacity: 0;
-  background-color: white;
-  overflow: hidden;
-  transition: var(--main-transition);
-  transform: translateX(-50%);
-  justify-content: space-evenly;
-}
-header .mega-menu .image img {
-  max-width: 450px;
-  min-height: 100%;
-}
-header nav li:hover .mega-menu {
-  opacity: 1;
-  z-index: 100;
-}
-.mega-menu .links {
-  min-width: 250px;
-}
-.mega-menu .links li {
-  padding: 20px;
-  transition: var(--main-transition);
-}
-.mega-menu .links li i {
-  margin-right: 5px;
-}
-.mega-menu .links li:not(:last-child) {
-  border-bottom: 2px solid #ddd;
-}
-.mega-menu .links li a {
-  font-size: 18px;
-  color: var(--main-color);
-  font-weight: bold;
-}
-.mega-menu .links li:hover {
-  background-color: #e9e6e6;
-}
-@media (max-width: 768px) {
-  .mega-menu {
-    flex-direction: column;
-    gap: 0;
-    padding: 5px;
-    width: 100%;
-  }
-  .mega-menu .links li {
-    padding: 15px;
-  }
-  header .mega-menu .links:first-of-type li:last-child {
-    border-bottom: 1px solid #e9e6e6;
-  }
-}
-@media (max-width: 992px) {
-  header .mega-menu .image {
-    display: none;
-  }
 }
 /* End Header */
 
