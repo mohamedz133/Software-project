@@ -16,13 +16,16 @@ const ProductPage = (productid) => {
 
     // Render the product information
     return (
-        <div className="Productpage">
-            <div className="data">
-                <img src={product.image} alt={product.description}/>
-            </div>
-            <div className="desc">
-                <h3>{product.description}</h3>
-                <p>Price: {product.price}</p>
+        <div className="single-product">
+            <div className="container">
+                <div className="data">
+                    <img src={product.image} alt={product.description}/>
+                </div>
+                <div className="info">
+                    <h3>{product.description}</h3>
+                    <p>Price: {product.price}</p>
+                    <button className="add-to-cart-btn" data-product-id="1" onClick={(e) => { e.preventDefault(); addToCart(getProductFromButton(e.target)); }}>Add to Cart</button>
+                </div>
             </div>
         </div>
     );
