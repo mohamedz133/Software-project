@@ -11,7 +11,7 @@ const getAllProducts =  asyncHandler (async (req, res) => {
         const page = parseInt(req.query.page) || 1;
         // num of docs that i will return 
         const limit = parseInt(req.query.limit)|| 10;
-        // filtering for dep {men,womam,kids}
+        // filtering for dep {men,women,kids}
         const filter = {};
         if (department) {
             filter.department = department;
