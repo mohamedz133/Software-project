@@ -7,4 +7,3 @@ npm i morgan
 npm i mongoose
 npm i express-validator
 npm i nodemon
-npm i express-async-handler
