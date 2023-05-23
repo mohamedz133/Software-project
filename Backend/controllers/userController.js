@@ -1,5 +1,28 @@
-import {Users} from "../models/userModel.js";
 import { hash } from "bcrypt";
+import asyncHandler from "express-async-handler";
+
+import {Users} from "../models/userModel.js";
+import { uploadimage } from "../middlewares/imageUpload.js";
+import expressAsyncHandler from "express-async-handler";
+
+
+const uploadUserImg = uploadimage("image");
+
+const resizeImage = asyncHandler(async (req, res, next) =>
+    {
+        // create a unique name
+        const filename = `user-${Date.now()}.jpeg`;
+
+        if (req.file)
+        {
+            req.body.img = filename;
+        }
+        
+        next();
+
+    }
+);
+
 
 // @desc    Get all users
 // @route   GET /api/users
@@ -16,7 +39,6 @@ const getUsers = async (req, res) => {
         const users = await Users.find({});
         res.json(users);
     } catch (error) {
-        console.log(error);
         res.status(500).json({error: error.message});
     }
 }
@@ -35,7 +57,6 @@ const createUser = async (req, res) => {
         const user = await Users.create(req.body);
         res.json(user);
     } catch (error) {
-        console.log(error);
         res.status(500).json({error: error.message});
     }
 }
@@ -57,7 +78,6 @@ const getUserById = async (req, res) => {
         }
         res.json(user);
     } catch (error) {
-        console.log(error);
         res.status(500).json({error: error.message});
     }
 }
@@ -79,7 +99,6 @@ const updateUser = async (req, res) => {
         res.json(newUser);
     } 
     catch (error) {
-        console.log(error);
         res.status(500).json({error: error.message});
     }
     }
@@ -97,10 +116,9 @@ const deleteUser = async (req, res) => {
         }
         res.json(user);
     } catch (error) {
-        console.log(error);
         res.status(500).json({error: error.message});
     }
 }
 
 
-export {getUsers, getUserById, createUser, updateUser, deleteUser};
+export {getUsers, getUserById, createUser, updateUser, deleteUser, uploadUserImg, resizeImage};

@@ -16,6 +16,7 @@ const signup = async (req, res) => {
     try 
     {
         // create user
+        req.body.rule = "user";
         const user = await Users.create(req.body);
         // generate token
         const token = generateToken(user.id);
