@@ -12,11 +12,20 @@ function App() {
 
     function fetchProducts() {
         fetch("http://localhost:3000/api/products")
-            .then(response => response.json())
-            .then(data => setProducts(data))
-            .catch(error => console.log('Error fetching products:', error));
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Response not OK');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('API response:', data);
+                setProducts(data);
+            })
+            .catch(error => {
+                console.log('Error fetching products:', error);
+            });
     }
-
     function getProductFromButton(button) {
         const product = button.parentElement;
         const productId = product.querySelector('.add-to-cart-btn').getAttribute('data-product-id');
@@ -85,9 +94,9 @@ function App() {
             <i className="fa-duotone fa-user-tie-hair"></i>
             <div className="header">
                 <ul className="nav">
-                    <button onClick={fetchProducts}>Men</button>
-                    <button onClick={fetchProducts}>Women</button>
-                    <button onClick={fetchProducts}>Children</button>
+                    <button onClick={fetchProducts}>men</button>
+                    <button onClick={fetchProducts}>women</button>
+                    <button onClick={fetchProducts}>kids</button>
                 </ul>
                 <div className="clear"></div>
             </div>
