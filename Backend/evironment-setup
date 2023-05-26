@@ -9,3 +9,4 @@ npm i express-validator
 npm i nodemon
 npm i jsonwebtoken
 npm i cookie-parser
+npm i multer

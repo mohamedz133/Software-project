@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 
 const productSchema = new mongoose.Schema({
-    title: {type: String,unique:true, required: true},
+    title: {type: String, required: true},
     img: {type: String },
     description: {type: String,required:true},
     quantity: {type: Number,required:true },
@@ -10,7 +10,7 @@ const productSchema = new mongoose.Schema({
     seller_id: {type: Number, required: true},
     rating: {type: Number},
     colors: {type: Array},
-    department: {type: String,enum:["men","woman","kids"] ,required: true},
+    department: {type: String,enum:["men","women","kids"] ,required: true},
 countInStack:{type:Number,
     required:true,
     min:0,
